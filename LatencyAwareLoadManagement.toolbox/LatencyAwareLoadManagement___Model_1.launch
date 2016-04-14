@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.lamport.tla.toolbox.tool.tlc.modelCheck">
+<stringAttribute key="TLCCmdLineParameters" value=""/>
+<intAttribute key="autoLockTime" value="15"/>
+<stringAttribute key="configurationName" value="Model_1"/>
+<intAttribute key="dfidDepth" value="100"/>
+<booleanAttribute key="dfidMode" value="false"/>
+<intAttribute key="distributedFPSetCount" value="0"/>
+<stringAttribute key="distributedNetworkInterface" value="10.81.226.81"/>
+<stringAttribute key="distributedTLC" value="off"/>
+<stringAttribute key="distributedTLCVMArgs" value=""/>
+<intAttribute key="fpBits" value="0"/>
+<intAttribute key="fpIndex" value="1"/>
+<intAttribute key="maxHeapSize" value="25"/>
+<intAttribute key="maxSetSize" value="1000000"/>
+<booleanAttribute key="mcMode" value="true"/>
+<stringAttribute key="modelBehaviorInit" value="Init"/>
+<stringAttribute key="modelBehaviorNext" value="Next"/>
+<stringAttribute key="modelBehaviorSpec" value="Spec"/>
+<intAttribute key="modelBehaviorSpecType" value="1"/>
+<stringAttribute key="modelBehaviorVars" value="clientLoadRemaining, serverCapacityRemaining"/>
+<stringAttribute key="modelComments" value="three by three with enough server capacity"/>
+<booleanAttribute key="modelCorrectnessCheckDeadlock" value="false"/>
+<listAttribute key="modelCorrectnessInvariants">
+<listEntry value="1TypeOK"/>
+<listEntry value="1\E l \in Locations : clientLoadRemaining[l] &gt; 0"/>
+</listAttribute>
+<listAttribute key="modelCorrectnessProperties">
+<listEntry value="1LivenessFairnessOnConsumption"/>
+<listEntry value="1LivenessNoIdleCapacityLeftIfClientLoadRemaining"/>
+<listEntry value="1LM!LivenessFairnessOnConsumption"/>
+<listEntry value="1LM!LivenessNoIdleCapacityLeftIfClientLoadRemaining"/>
+<listEntry value="1LM!Spec"/>
+</listAttribute>
+<stringAttribute key="modelExpressionEval" value=""/>
+<stringAttribute key="modelParameterActionConstraint" value=""/>
+<listAttribute key="modelParameterConstants">
+<listEntry value="Locations;;{&quot;L1&quot;, &quot;L2&quot;, &quot;L3&quot;};0;0"/>
+<listEntry value="ServerCapacity;;(&quot;L1&quot; :&gt; 11) @@ (&quot;L2&quot; :&gt; 21) @@ (&quot;L3&quot; :&gt; 1);0;0"/>
+<listEntry value="ClientLoad;;(&quot;L1&quot; :&gt; 0) @@ (&quot;L2&quot; :&gt; 18) @@ (&quot;L3&quot; :&gt; 12);0;0"/>
+<listEntry value="LocationDistanceMap;;(&lt;&lt;&quot;L1&quot;, &quot;L1&quot;&gt;&gt; :&gt; 0)  @@ (&lt;&lt;&quot;L2&quot;, &quot;L2&quot;&gt;&gt; :&gt; 0) @@ (&lt;&lt;&quot;L3&quot;, &quot;L3&quot;&gt;&gt; :&gt; 0) @@&#13;&#10;(&lt;&lt;&quot;L1&quot;, &quot;L2&quot;&gt;&gt; :&gt; 5)  @@ (&lt;&lt;&quot;L2&quot;, &quot;L1&quot;&gt;&gt; :&gt; 3) @@&#13;&#10;(&lt;&lt;&quot;L1&quot;, &quot;L3&quot;&gt;&gt; :&gt; 10) @@ (&lt;&lt;&quot;L3&quot;, &quot;L1&quot;&gt;&gt; :&gt; 6) @@&#13;&#10;(&lt;&lt;&quot;L2&quot;, &quot;L3&quot;&gt;&gt; :&gt; 7)  @@ (&lt;&lt;&quot;L3&quot;, &quot;L2&quot;&gt;&gt; :&gt; 4);0;0"/>
+</listAttribute>
+<stringAttribute key="modelParameterContraint" value=""/>
+<listAttribute key="modelParameterDefinitions"/>
+<stringAttribute key="modelParameterModelValues" value="{}"/>
+<stringAttribute key="modelParameterNewDefinitions" value=""/>
+<intAttribute key="numberOfWorkers" value="2"/>
+<booleanAttribute key="recover" value="false"/>
+<stringAttribute key="result.mail.address" value=""/>
+<intAttribute key="simuAril" value="-1"/>
+<intAttribute key="simuDepth" value="100"/>
+<intAttribute key="simuSeed" value="-1"/>
+<stringAttribute key="specName" value="LatencyAwareLoadManagement"/>
+<stringAttribute key="view" value=""/>
+</launchConfiguration>

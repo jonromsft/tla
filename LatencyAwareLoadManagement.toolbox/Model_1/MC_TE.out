@@ -1,0 +1,98 @@
+@!@!@STARTMSG 2262:0 @!@!@
+TLC2 Version 2.08 of 21 December 2015
+@!@!@ENDMSG 2262 @!@!@
+@!@!@STARTMSG 2187:0 @!@!@
+Running in Model-Checking mode.
+@!@!@ENDMSG 2187 @!@!@
+@!@!@STARTMSG 2220:0 @!@!@
+Starting SANY...
+@!@!@ENDMSG 2220 @!@!@
+Parsing file MC.tla
+Parsing file LatencyAwareLoadManagement.tla
+Parsing file D:\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.201512230951\tla2sany\StandardModules\TLC.tla
+Parsing file D:\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.201512230951\tla2sany\StandardModules\Integers.tla
+Parsing file D:\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.201512230951\tla2sany\StandardModules\Sequences.tla
+Parsing file D:\tla\toolbox\plugins\org.lamport.tlatools_1.0.0.201512230951\tla2sany\StandardModules\Naturals.tla
+Parsing file LoadManagement.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module LoadManagement
+Semantic processing of module LatencyAwareLoadManagement
+Semantic processing of module TLC
+Semantic processing of module MC
+@!@!@STARTMSG 2219:0 @!@!@
+SANY finished.
+@!@!@ENDMSG 2219 @!@!@
+@!@!@STARTMSG 2185:0 @!@!@
+Starting... (2016-04-07 15:15:46)
+@!@!@ENDMSG 2185 @!@!@
+@!@!@STARTMSG 2212:0 @!@!@
+Implied-temporal checking--satisfiability problem has 1 branches.
+@!@!@ENDMSG 2212 @!@!@
+@!@!@STARTMSG 2189:0 @!@!@
+Computing initial states...
+@!@!@ENDMSG 2189 @!@!@
+@!@!@STARTMSG 2190:0 @!@!@
+Finished computing initial states: 1 distinct state generated.
+@!@!@ENDMSG 2190 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_1460067346081892000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ clientLoadRemaining = [L1 |-> 0, L2 |-> 18, L3 |-> 12]
+/\ serverCapacityRemaining = [L1 |-> 11, L2 |-> 21, L3 |-> 1]
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Action line 29, col 22 to line 36, col 140 of module LatencyAwareLoadManagement>
+/\ clientLoadRemaining = [L1 |-> 0, L2 |-> 0, L3 |-> 12]
+/\ serverCapacityRemaining = [L1 |-> 11, L2 |-> 3, L3 |-> 1]
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <Action line 29, col 22 to line 36, col 140 of module LatencyAwareLoadManagement>
+/\ clientLoadRemaining = [L1 |-> 0, L2 |-> 0, L3 |-> 11]
+/\ serverCapacityRemaining = [L1 |-> 11, L2 |-> 3, L3 |-> 0]
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Action line 29, col 22 to line 36, col 140 of module LatencyAwareLoadManagement>
+/\ clientLoadRemaining = [L1 |-> 0, L2 |-> 0, L3 |-> 8]
+/\ serverCapacityRemaining = [L1 |-> 11, L2 |-> 0, L3 |-> 0]
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Action line 29, col 22 to line 36, col 140 of module LatencyAwareLoadManagement>
+/\ clientLoadRemaining = [L1 |-> 0, L2 |-> 0, L3 |-> 0]
+/\ serverCapacityRemaining = [L1 |-> 3, L2 |-> 0, L3 |-> 0]
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2201:0 @!@!@
+The coverage statistics at 2016-04-07 15:15:47
+@!@!@ENDMSG 2201 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 35, col 35 to line 35, col 132 of module LatencyAwareLoadManagement: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 35 to line 36, col 140 of module LatencyAwareLoadManagement: 8
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2202:0 @!@!@
+End of statistics.
+@!@!@ENDMSG 2202 @!@!@
+@!@!@STARTMSG 2200:0 @!@!@
+Progress(4) at 2016-04-07 15:15:47: 9 states generated (1,250 s/min), 8 distinct states found (1,111 ds/min), 1 states left on queue.
+@!@!@ENDMSG 2200 @!@!@
+@!@!@STARTMSG 2199:0 @!@!@
+9 states generated, 8 distinct states found, 1 states left on queue.
+@!@!@ENDMSG 2199 @!@!@
+@!@!@STARTMSG 2194:0 @!@!@
+The depth of the complete state graph search is 4.
+@!@!@ENDMSG 2194 @!@!@
+@!@!@STARTMSG 2186:0 @!@!@
+Finished in 00s at (2016-04-07 15:15:47)
+@!@!@ENDMSG 2186 @!@!@
