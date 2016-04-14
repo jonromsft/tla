@@ -28,7 +28,7 @@
 		<link>
 			<name>LoadManagement.tla</name>
 			<type>1</type>
-			<location>D:/tla/CourseFiles/LoadManagement.tla</location>
+			<locationURI>PARENT-1-PROJECT_LOC/LoadManagement.tla</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
