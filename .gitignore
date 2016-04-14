@@ -1,0 +1,5 @@
+# ignoring the temporary files
+MC.cfg
+MC.out
+MC.tla
+MC_TE.out
