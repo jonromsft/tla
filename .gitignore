@@ -3,3 +3,6 @@ MC.cfg
 MC.out
 MC.tla
 MC_TE.out
+
+# ignoring the workspace
+workspace/*
