@@ -28,12 +28,6 @@ EdgesInOffState == {e \in Edges : edgeState[e] = "Off"}
 
 EdgesInTurningOffState == {e \in Edges : edgeState[e] = "TurningOff"}
 
-EdgesInOnState == {e \in Edges : ehsDecision[e] = "On"}
-
-EdgesInHealthyState == {e \in Edges : ehsDecision[e] = "Off"}
-
-EdgesInUnhealthyState == {e \in Edges : ehsDecision[e] = "Unhealthy"}
-
 -----------------------------------------------------------------------------------------------------
 (*************************************************************************)
 (* Model Messages                                                        *)
@@ -276,5 +270,5 @@ EhsSpec == EhsInit /\ [][EhsNext]_<<edgeState, ehsDecision, messagingState, msgs
 
 =============================================================================
 \* Modification History
-\* Last modified Wed Apr 27 10:55:09 PDT 2016 by guhanr
+\* Last modified Wed Apr 27 14:20:57 PDT 2016 by guhanr
 \* Created Wed Apr 20 10:03:01 PDT 2016 by guhanr
