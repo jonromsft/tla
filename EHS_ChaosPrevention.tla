@@ -6,7 +6,7 @@
 (* mechanism to prevent all EHS instances from turning off all Edges at the same time.                                                                         *)
 (***************************************************************************************************************************************************************)
 
-EXTENDS FiniteSets, Integers, Sequences
+EXTENDS FiniteSets, Integers
 
 CONSTANT 
  Edges, \* Set of Edges serving user traffic
@@ -33,12 +33,10 @@ EdgesInTurningOffState == {e \in Edges : edgeState[e] = "TurningOff"}
 (* Model Messages                                                        *)
 (*************************************************************************)
 Messages == 
-  [type : {"StatusRequest"}, reqSeq : Nat, sender : EdgesInTurningOffState, receiver : Edges]
+  [type : {"StatusRequest"}, sender : EdgesInTurningOffState, receiver : Edges]
     \cup
-  [type : {"StatusResponse"}, reqSeq : Nat, sender : Edges, receiver : EdgesInTurningOffState, val : {"On", "TurningOff", "Off", "Timeout"}] 
-    \cup
-  [type : {"StatusRequestCompleted"}, sender : EdgesInTurningOffState, reason : {"BackOn" ,"TurnedOff", "Retry"}]
-
+  [type : {"StatusResponse"}, sender : Edges, receiver : EdgesInTurningOffState, val : {"On", "TurningOff", "Off", "Timeout"}] 
+    
 -----------------------------------------------------------------------------------------------------
 (*************************************************************************)
 (* Model Init                                                            *)
@@ -254,7 +252,7 @@ NoTwoTurningOffEdgesSeeEachOtherInOnState ==
                           /\ edgeState[e1] = "TurningOff"
                           /\ edgeState[e2] = "TurningOff"
                           /\ messagingState[e1] = "Completed"
-                          /\ messagingState[e1] = "Completed"
+                          /\ messagingState[e2] = "Completed"
                           /\ StateOfTargetEdgeAsPerEdge(e2, e1) = {"On"}
                           /\ StateOfTargetEdgeAsPerEdge(e1, e2) = {"On"})
 
@@ -270,5 +268,5 @@ EhsSpec == EhsInit /\ [][EhsNext]_<<edgeState, ehsDecision, messagingState, msgs
 
 =============================================================================
 \* Modification History
-\* Last modified Wed Apr 27 14:20:57 PDT 2016 by guhanr
-\* Created Wed Apr 20 10:03:01 PDT 2016 by guhanr
+\* Last modified Wed May 04 19:02:51 PDT 2016 by guhanr
+\* Created Wed May 04 19:02:11 PDT 2016 by guhanr
